@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'SEGA LOGO FONT';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SEGA LOGO FONT'), url('SEGA.woff') format('woff');
+    }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    transition: 0.5s;
+    background-color: #b7ffeb;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-family:'SEGA LOGO FONT';
+    color: aliceblue;
+}
