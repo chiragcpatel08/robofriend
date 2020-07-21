@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Cardlist from './components/Cardlist';
 import SearchBox from './components/SearchBox';
+import Scroll from './Scroll.js';
 import './App.css';
 
 class App extends Component {
@@ -30,7 +31,9 @@ class App extends Component {
       <div>
         <h1 className="text-center">ROBOFRIENDS APP</h1>
         <SearchBox onInputChange={this.onInputChange}/>
-        <Cardlist robots={filteredRobots}/>        
+        <Scroll>
+          <Cardlist robots={filteredRobots}/> 
+        </Scroll>               
       </div>
     );
   }
