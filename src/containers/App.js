@@ -3,6 +3,7 @@ import axios from 'axios';
 import Cardlist from '../components/Cardlist';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll.js';
+import ErrorBoundry from '../components/ErrorBoundry.js';
 import './App.css';
 
 class App extends Component {
@@ -32,7 +33,9 @@ class App extends Component {
         <h1 className="text-center">ROBOFRIENDS APP</h1>
         <SearchBox onInputChange={this.onInputChange}/>
         <Scroll>
-          <Cardlist robots={filteredRobots}/> 
+          <ErrorBoundry>
+            <Cardlist robots={filteredRobots}/> 
+          </ErrorBoundry>          
         </Scroll>               
       </div>
     );
